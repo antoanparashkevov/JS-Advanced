@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <article>
+            <button>Click me</button>
+        </article>
+    </div>
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click',onClick)//button
+        btn.parentElement.addEventListener('click',onClick)//article
+        btn.parentElement.parentElement.addEventListener('click',onClick)//div
+        function onClick(ev){
+            console.log('Clicked 1', ev.target)
+            console.log('Clicked 2',ev.currentTarget)
+            //the difference between these is that target shows the element that triggers the event,
+            //the currentTarget shows all places that we have the same Event handler in any event Listener
+            //by default this is bubbling phase (false as a third argument), that means from down to up it loops through the tree
+            //button -> article -> div
+            //capture (true as a third argument) phase is the opposite
+            //div -> article -> button
+        }
+    </script>
+</body>
+</html>
