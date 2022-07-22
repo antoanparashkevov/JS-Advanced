@@ -1,0 +1,20 @@
+{
+  "name": "unitproject",
+  "version": "1.0.0",
+  "description": "Short demo of unit testing of frameworks",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test.spec.js"
+  },
+  "keywords": [
+    "testing",
+    "mocha",
+    "chai",
+    "demo"
+  ],
+  "author": "Antoan Parashkevov",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.6"
+  }
+}
